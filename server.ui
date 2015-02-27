@@ -24,7 +24,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>1</number>
     </property>
     <widget class="QWidget" name="tab">
      <attribute name="title">
@@ -33,8 +33,8 @@
      <widget class="QWidget" name="formLayoutWidget">
       <property name="geometry">
        <rect>
-        <x>50</x>
-        <y>60</y>
+        <x>560</x>
+        <y>40</y>
         <width>160</width>
         <height>71</height>
        </rect>
@@ -76,27 +76,14 @@
      <widget class="QPushButton" name="run">
       <property name="geometry">
        <rect>
-        <x>250</x>
-        <y>80</y>
+        <x>650</x>
+        <y>150</y>
         <width>71</width>
         <height>27</height>
        </rect>
       </property>
       <property name="text">
        <string>Run</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_3">
-      <property name="geometry">
-       <rect>
-        <x>60</x>
-        <y>170</y>
-        <width>58</width>
-        <height>15</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Log File</string>
       </property>
      </widget>
      <widget class="QTextEdit" name="textEdit">
@@ -109,63 +96,76 @@
        </rect>
       </property>
      </widget>
-    </widget>
-    <widget class="QWidget" name="tab_2">
-     <attribute name="title">
-      <string>Data</string>
-     </attribute>
      <widget class="QWidget" name="formLayoutWidget_2">
       <property name="geometry">
        <rect>
-        <x>80</x>
-        <y>60</y>
+        <x>110</x>
+        <y>30</y>
         <width>231</width>
-        <height>128</height>
+        <height>161</height>
        </rect>
       </property>
       <layout class="QFormLayout" name="formLayout_2">
+       <property name="fieldGrowthPolicy">
+        <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
+       </property>
        <item row="1" column="0">
-        <widget class="QLabel" name="label_8">
-         <property name="text">
-          <string>Heart </string>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="1">
-        <widget class="QLineEdit" name="heart1"/>
-       </item>
-       <item row="2" column="0">
-        <widget class="QLabel" name="label_9">
-         <property name="text">
-          <string>Temp</string>
-         </property>
-        </widget>
-       </item>
-       <item row="2" column="1">
-        <widget class="QLineEdit" name="temp1"/>
-       </item>
-       <item row="3" column="0">
-        <widget class="QLabel" name="label_10">
-         <property name="text">
-          <string>Pressure</string>
-         </property>
-        </widget>
-       </item>
-       <item row="3" column="1">
-        <widget class="QLineEdit" name="pressure1"/>
-       </item>
-       <item row="0" column="0">
         <widget class="QLabel" name="label_11">
          <property name="text">
           <string>Name</string>
          </property>
         </widget>
        </item>
-       <item row="0" column="1">
+       <item row="1" column="1">
         <widget class="QLineEdit" name="name1"/>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLabel" name="label_8">
+         <property name="text">
+          <string>Heart </string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QLineEdit" name="heart1"/>
+       </item>
+       <item row="3" column="0">
+        <widget class="QLabel" name="label_9">
+         <property name="text">
+          <string>Temp</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="1">
+        <widget class="QLineEdit" name="temp1"/>
+       </item>
+       <item row="4" column="0">
+        <widget class="QLabel" name="label_10">
+         <property name="text">
+          <string>Pressure</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="1">
+        <widget class="QLineEdit" name="pressure1"/>
+       </item>
+       <item row="0" column="1">
+        <widget class="QLineEdit" name="campId1"/>
+       </item>
+       <item row="0" column="0">
+        <widget class="QLabel" name="label_4">
+         <property name="text">
+          <string>Camp ID</string>
+         </property>
+        </widget>
        </item>
       </layout>
      </widget>
+    </widget>
+    <widget class="QWidget" name="tab_2">
+     <attribute name="title">
+      <string>Data</string>
+     </attribute>
      <widget class="QTableWidget" name="table">
       <property name="enabled">
        <bool>true</bool>
@@ -173,9 +173,9 @@
       <property name="geometry">
        <rect>
         <x>0</x>
-        <y>280</y>
+        <y>0</y>
         <width>881</width>
-        <height>201</height>
+        <height>481</height>
        </rect>
       </property>
       <property name="editTriggers">
@@ -226,128 +226,6 @@
         <string>Time</string>
        </property>
       </column>
-     </widget>
-     <widget class="QWidget" name="formLayoutWidget_3">
-      <property name="geometry">
-       <rect>
-        <x>430</x>
-        <y>60</y>
-        <width>231</width>
-        <height>128</height>
-       </rect>
-      </property>
-      <layout class="QFormLayout" name="formLayout_4">
-       <item row="1" column="0">
-        <widget class="QLabel" name="label_12">
-         <property name="text">
-          <string>Heart </string>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="1">
-        <widget class="QLineEdit" name="heart2"/>
-       </item>
-       <item row="2" column="0">
-        <widget class="QLabel" name="label_13">
-         <property name="text">
-          <string>Temp</string>
-         </property>
-        </widget>
-       </item>
-       <item row="2" column="1">
-        <widget class="QLineEdit" name="temp2"/>
-       </item>
-       <item row="3" column="0">
-        <widget class="QLabel" name="label_14">
-         <property name="text">
-          <string>Pressure</string>
-         </property>
-        </widget>
-       </item>
-       <item row="3" column="1">
-        <widget class="QLineEdit" name="pressure2"/>
-       </item>
-       <item row="0" column="0">
-        <widget class="QLabel" name="label_15">
-         <property name="text">
-          <string>Name</string>
-         </property>
-        </widget>
-       </item>
-       <item row="0" column="1">
-        <widget class="QLineEdit" name="name2"/>
-       </item>
-      </layout>
-     </widget>
-     <widget class="Line" name="line">
-      <property name="geometry">
-       <rect>
-        <x>380</x>
-        <y>0</y>
-        <width>20</width>
-        <height>221</height>
-       </rect>
-      </property>
-      <property name="orientation">
-       <enum>Qt::Vertical</enum>
-      </property>
-     </widget>
-     <widget class="Line" name="line_2">
-      <property name="geometry">
-       <rect>
-        <x>0</x>
-        <y>210</y>
-        <width>891</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="orientation">
-       <enum>Qt::Horizontal</enum>
-      </property>
-     </widget>
-     <widget class="QWidget" name="formLayoutWidget_4">
-      <property name="geometry">
-       <rect>
-        <x>120</x>
-        <y>20</y>
-        <width>160</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <layout class="QFormLayout" name="formLayout">
-       <item row="0" column="0">
-        <widget class="QLabel" name="label_4">
-         <property name="text">
-          <string>Camp ID</string>
-         </property>
-        </widget>
-       </item>
-       <item row="0" column="1">
-        <widget class="QLineEdit" name="campId1"/>
-       </item>
-      </layout>
-     </widget>
-     <widget class="QWidget" name="formLayoutWidget_5">
-      <property name="geometry">
-       <rect>
-        <x>470</x>
-        <y>20</y>
-        <width>160</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <layout class="QFormLayout" name="formLayout_5">
-       <item row="0" column="0">
-        <widget class="QLabel" name="label_5">
-         <property name="text">
-          <string>Camp ID</string>
-         </property>
-        </widget>
-       </item>
-       <item row="0" column="1">
-        <widget class="QLineEdit" name="campId2"/>
-       </item>
-      </layout>
      </widget>
     </widget>
    </widget>

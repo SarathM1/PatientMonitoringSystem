@@ -22,7 +22,7 @@ class myWindow(QMainWindow,server.Ui_MainWindow):
         super(myWindow,self).__init__(parent)
 
         self.setupUi(self)
-	
+	self.updateTable()
 	self.threadObj = workerThread()
         self.connect(self.run,SIGNAL("clicked()"),self.settings)
 
@@ -59,7 +59,26 @@ class myWindow(QMainWindow,server.Ui_MainWindow):
 	self.heart1.setText(clHeart)
 	self.pressure1.setText(clBreath)
    	c.execute("INSERT INTO  table1(sNo,campId,name,heart,temp,pressure,serious,date,time) VALUES(?,?,?,?,?,?,?,?,?)",(1,clCampId[0],clName,clHeart,clTemp,clBreath,1,1,1))
+	self.updateTable()
         conn.commit()
+    def updateTable(self):
+        #conn=sqlite3.connect("Midhun.db")
+        #c=conn.cursor()
+        c.execute("SELECT * FROM table1")
+        allSQLRows= c.fetchall()
+        
+        self.table.setRowCount(len(allSQLRows)) ##set number of rows
+        self.table.setColumnCount(9) ##this is fixed for myTableWidget, ensure that both of your tables, sql and qtablewidged have the same number of columns
+                
+        row = 0
+               
+                
+        c.execute("SELECT * FROM table1")
+        cur = c.fetchall()   
+        for i,row in enumerate(cur):
+            for j,val in enumerate(row):
+                self.table.setItem(i, j, QTableWidgetItem(str(val))) 
+         
     
 
 
