@@ -99,10 +99,10 @@
      <widget class="QWidget" name="formLayoutWidget_2">
       <property name="geometry">
        <rect>
-        <x>100</x>
-        <y>10</y>
+        <x>110</x>
+        <y>30</y>
         <width>231</width>
-        <height>182</height>
+        <height>161</height>
        </rect>
       </property>
       <layout class="QFormLayout" name="formLayout_2">
@@ -117,55 +117,45 @@
         </widget>
        </item>
        <item row="1" column="1">
-        <widget class="QLineEdit" name="name"/>
-       </item>
-       <item row="2" column="1">
-        <widget class="QLineEdit" name="temp"/>
-       </item>
-       <item row="4" column="1">
-        <widget class="QLineEdit" name="bpd"/>
-       </item>
-       <item row="5" column="0">
-        <widget class="QLabel" name="label_10">
-         <property name="text">
-          <string>Systolic</string>
-         </property>
-        </widget>
-       </item>
-       <item row="5" column="1">
-        <widget class="QLineEdit" name="bps"/>
-       </item>
-       <item row="0" column="1">
-        <widget class="QLineEdit" name="campId"/>
-       </item>
-       <item row="0" column="0">
-        <widget class="QLabel" name="label_4">
-         <property name="text">
-          <string>Camp ID</string>
-         </property>
-        </widget>
+        <widget class="QLineEdit" name="name1"/>
        </item>
        <item row="2" column="0">
-        <widget class="QLabel" name="label_12">
+        <widget class="QLabel" name="label_8">
+         <property name="text">
+          <string>Heart </string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QLineEdit" name="heart1"/>
+       </item>
+       <item row="3" column="0">
+        <widget class="QLabel" name="label_9">
          <property name="text">
           <string>Temp</string>
          </property>
         </widget>
        </item>
+       <item row="3" column="1">
+        <widget class="QLineEdit" name="temp1"/>
+       </item>
        <item row="4" column="0">
-        <widget class="QLabel" name="label_13">
+        <widget class="QLabel" name="label_10">
          <property name="text">
-          <string>Diastolic</string>
+          <string>Pressure</string>
          </property>
         </widget>
        </item>
-       <item row="3" column="1">
-        <widget class="QLineEdit" name="pulse"/>
+       <item row="4" column="1">
+        <widget class="QLineEdit" name="pressure1"/>
        </item>
-       <item row="3" column="0">
-        <widget class="QLabel" name="label_3">
+       <item row="0" column="1">
+        <widget class="QLineEdit" name="campId1"/>
+       </item>
+       <item row="0" column="0">
+        <widget class="QLabel" name="label_4">
          <property name="text">
-          <string>Pulse</string>
+          <string>Camp ID</string>
          </property>
         </widget>
        </item>
@@ -208,22 +198,22 @@
       </column>
       <column>
        <property name="text">
+        <string>Heart Beat</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
         <string>Temp</string>
        </property>
       </column>
       <column>
        <property name="text">
-        <string>Pulse</string>
+        <string>Pressure</string>
        </property>
       </column>
       <column>
        <property name="text">
-        <string>BPD</string>
-       </property>
-      </column>
-      <column>
-       <property name="text">
-        <string>BPS</string>
+        <string>Serious ?</string>
        </property>
       </column>
       <column>
@@ -242,55 +232,72 @@
      <attribute name="title">
       <string>Threshold</string>
      </attribute>
-     <widget class="QLabel" name="label_5">
+     <widget class="QDial" name="thTemp">
       <property name="geometry">
        <rect>
-        <x>72</x>
+        <x>110</x>
+        <y>90</y>
+        <width>111</width>
+        <height>101</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit">
+      <property name="geometry">
+       <rect>
+        <x>140</x>
+        <y>50</y>
+        <width>89</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>40</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_3">
+      <property name="geometry">
+       <rect>
+        <x>71</x>
         <y>50</y>
         <width>34</width>
         <height>27</height>
        </rect>
       </property>
       <property name="text">
-       <string>Min</string>
+       <string>Temp</string>
       </property>
      </widget>
-     <widget class="QDial" name="thBpSystolic">
+     <widget class="Line" name="line">
       <property name="geometry">
        <rect>
-        <x>721</x>
-        <y>310</y>
-        <width>111</width>
-        <height>101</height>
-       </rect>
-      </property>
-      <property name="minimum">
-       <number>140</number>
-      </property>
-      <property name="maximum">
-       <number>300</number>
-      </property>
-      <property name="notchesVisible">
-       <bool>true</bool>
-      </property>
-     </widget>
-     <widget class="Line" name="line_3">
-      <property name="geometry">
-       <rect>
-        <x>1</x>
-        <y>30</y>
-        <width>901</width>
-        <height>16</height>
+        <x>313</x>
+        <y>0</y>
+        <width>20</width>
+        <height>491</height>
        </rect>
       </property>
       <property name="orientation">
-       <enum>Qt::Horizontal</enum>
+       <enum>Qt::Vertical</enum>
       </property>
      </widget>
-     <widget class="QLineEdit" name="lineEdit_6">
+     <widget class="Line" name="line_2">
       <property name="geometry">
        <rect>
-        <x>750</x>
+        <x>620</x>
+        <y>0</y>
+        <width>20</width>
+        <height>501</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_4">
+      <property name="geometry">
+       <rect>
+        <x>139</x>
         <y>220</y>
         <width>89</width>
         <height>27</height>
@@ -300,10 +307,43 @@
        <string>40</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="lPulseMin">
+     <widget class="QLabel" name="label_7">
       <property name="geometry">
        <rect>
-        <x>441</x>
+        <x>70</x>
+        <y>220</y>
+        <width>34</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Temp</string>
+      </property>
+     </widget>
+     <widget class="QDial" name="thTemp_4">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>310</y>
+        <width>111</width>
+        <height>101</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QDial" name="thTemp_2">
+      <property name="geometry">
+       <rect>
+        <x>409</x>
+        <y>90</y>
+        <width>111</width>
+        <height>101</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_2">
+      <property name="geometry">
+       <rect>
+        <x>440</x>
         <y>50</y>
         <width>89</width>
         <height>27</height>
@@ -313,10 +353,131 @@
        <string>40</string>
       </property>
      </widget>
+     <widget class="QLabel" name="label_5">
+      <property name="geometry">
+       <rect>
+        <x>371</x>
+        <y>50</y>
+        <width>34</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Temp</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_12">
+      <property name="geometry">
+       <rect>
+        <x>369</x>
+        <y>220</y>
+        <width>34</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Temp</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_5">
+      <property name="geometry">
+       <rect>
+        <x>438</x>
+        <y>220</y>
+        <width>89</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>40</string>
+      </property>
+     </widget>
+     <widget class="QDial" name="thTemp_5">
+      <property name="geometry">
+       <rect>
+        <x>409</x>
+        <y>310</y>
+        <width>111</width>
+        <height>101</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QDial" name="thTemp_3">
+      <property name="geometry">
+       <rect>
+        <x>720</x>
+        <y>90</y>
+        <width>111</width>
+        <height>101</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_3">
+      <property name="geometry">
+       <rect>
+        <x>740</x>
+        <y>50</y>
+        <width>89</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>40</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_6">
+      <property name="geometry">
+       <rect>
+        <x>671</x>
+        <y>50</y>
+        <width>34</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Temp</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_13">
+      <property name="geometry">
+       <rect>
+        <x>680</x>
+        <y>220</y>
+        <width>34</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Temp</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_6">
+      <property name="geometry">
+       <rect>
+        <x>749</x>
+        <y>220</y>
+        <width>89</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>40</string>
+      </property>
+     </widget>
+     <widget class="QDial" name="thTemp_6">
+      <property name="geometry">
+       <rect>
+        <x>720</x>
+        <y>310</y>
+        <width>111</width>
+        <height>101</height>
+       </rect>
+      </property>
+     </widget>
      <widget class="QLabel" name="label_14">
       <property name="geometry">
        <rect>
-        <x>111</x>
+        <x>110</x>
         <y>10</y>
         <width>81</width>
         <height>17</height>
@@ -329,207 +490,7 @@
      <widget class="QLabel" name="label_15">
       <property name="geometry">
        <rect>
-        <x>681</x>
-        <y>220</y>
-        <width>51</width>
-        <height>27</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Systolic</string>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="lTempMax">
-      <property name="geometry">
-       <rect>
-        <x>140</x>
-        <y>220</y>
-        <width>89</width>
-        <height>27</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>40</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_6">
-      <property name="geometry">
-       <rect>
-        <x>672</x>
-        <y>50</y>
-        <width>51</width>
-        <height>27</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Diastolic</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_16">
-      <property name="geometry">
-       <rect>
-        <x>761</x>
-        <y>10</y>
-        <width>41</width>
-        <height>17</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>BP</string>
-      </property>
-     </widget>
-     <widget class="QDial" name="theBpDiastolic">
-      <property name="geometry">
-       <rect>
-        <x>721</x>
-        <y>90</y>
-        <width>111</width>
-        <height>101</height>
-       </rect>
-      </property>
-      <property name="maximum">
-       <number>60</number>
-      </property>
-      <property name="notchesVisible">
-       <bool>true</bool>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="lBpd">
-      <property name="geometry">
-       <rect>
-        <x>741</x>
-        <y>50</y>
-        <width>89</width>
-        <height>27</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>40</string>
-      </property>
-     </widget>
-     <widget class="Line" name="line_2">
-      <property name="geometry">
-       <rect>
-        <x>621</x>
-        <y>0</y>
-        <width>20</width>
-        <height>501</height>
-       </rect>
-      </property>
-      <property name="orientation">
-       <enum>Qt::Vertical</enum>
-      </property>
-     </widget>
-     <widget class="QDial" name="thTempMin">
-      <property name="geometry">
-       <rect>
-        <x>111</x>
-        <y>90</y>
-        <width>111</width>
-        <height>101</height>
-       </rect>
-      </property>
-      <property name="maximum">
-       <number>37</number>
-      </property>
-      <property name="notchesVisible">
-       <bool>true</bool>
-      </property>
-     </widget>
-     <widget class="QDial" name="thPulseMax">
-      <property name="geometry">
-       <rect>
-        <x>410</x>
-        <y>310</y>
-        <width>111</width>
-        <height>101</height>
-       </rect>
-      </property>
-      <property name="minimum">
-       <number>90</number>
-      </property>
-      <property name="maximum">
-       <number>120</number>
-      </property>
-      <property name="notchesVisible">
-       <bool>true</bool>
-      </property>
-     </widget>
-     <widget class="QDial" name="thTempMax_2">
-      <property name="geometry">
-       <rect>
-        <x>111</x>
-        <y>310</y>
-        <width>111</width>
-        <height>101</height>
-       </rect>
-      </property>
-      <property name="minimum">
-       <number>40</number>
-      </property>
-      <property name="notchesVisible">
-       <bool>true</bool>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="lTempMin">
-      <property name="geometry">
-       <rect>
-        <x>141</x>
-        <y>50</y>
-        <width>89</width>
-        <height>27</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>40</string>
-      </property>
-     </widget>
-     <widget class="QDial" name="thPulseMin">
-      <property name="geometry">
-       <rect>
-        <x>410</x>
-        <y>90</y>
-        <width>111</width>
-        <height>101</height>
-       </rect>
-      </property>
-      <property name="maximum">
-       <number>60</number>
-      </property>
-      <property name="notchesVisible">
-       <bool>true</bool>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_7">
-      <property name="geometry">
-       <rect>
-        <x>372</x>
-        <y>50</y>
-        <width>34</width>
-        <height>27</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_8">
-      <property name="geometry">
-       <rect>
-        <x>71</x>
-        <y>220</y>
-        <width>34</width>
-        <height>27</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Max</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_17">
-      <property name="geometry">
-       <rect>
-        <x>451</x>
+        <x>450</x>
         <y>10</y>
         <width>31</width>
         <height>17</height>
@@ -539,56 +500,30 @@
        <string>Pulse</string>
       </property>
      </widget>
-     <widget class="Line" name="line">
+     <widget class="QLabel" name="label_16">
       <property name="geometry">
        <rect>
-        <x>314</x>
-        <y>0</y>
-        <width>20</width>
-        <height>491</height>
+        <x>760</x>
+        <y>10</y>
+        <width>41</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Breath</string>
+      </property>
+     </widget>
+     <widget class="Line" name="line_3">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>30</y>
+        <width>901</width>
+        <height>16</height>
        </rect>
       </property>
       <property name="orientation">
-       <enum>Qt::Vertical</enum>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="lPulseMax">
-      <property name="geometry">
-       <rect>
-        <x>439</x>
-        <y>220</y>
-        <width>89</width>
-        <height>27</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>40</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_18">
-      <property name="geometry">
-       <rect>
-        <x>370</x>
-        <y>220</y>
-        <width>34</width>
-        <height>27</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Max</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_9">
-      <property name="geometry">
-       <rect>
-        <x>370</x>
-        <y>50</y>
-        <width>34</width>
-        <height>27</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Min</string>
+       <enum>Qt::Horizontal</enum>
       </property>
      </widget>
     </widget>

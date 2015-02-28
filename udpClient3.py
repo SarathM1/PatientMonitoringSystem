@@ -1,5 +1,5 @@
 import socket
-import minimalmodbus
+#import minimalmodbus
 import serial
 import time
 
@@ -17,25 +17,40 @@ def Main():
     oldBreath=0
     while True:
 	
-	name = raw_input("message ->")	
+	name = raw_input("name ->")	
 	temp = raw_input("temp ->")
-	heart = raw_input("heart ->")
-	breath = raw_input("breath ->")
-	
-	#newBreath = instrument.read_register(4105)
-    	#newHeart = instrument.read_register(4106)
-    	#level3 = instrument.read_register(4107)
-	print 'newBreath' + str(breath)
+	pulse = raw_input("pulse ->")
+	bpd = raw_input("bpd ->")
+	bps = raw_input("bps ->")
+	print '-----------------------'
+	"""while True:
+		name = instrument.read_register(4109)
+		temp = instrument.read_register(4105)
+	    	pulse = instrument.read_register(4106)
+	    	bpd = instrument.read_register(4107)
+		bps = instrument.read_register(4108)
+		print 'name: ' + str(name),
+		print 'temp: ' + str(temp),
+		print 'bpd: ' + str(bpd),
+		print 'bps: ' + str(bps),
+		print 'pulse: ' + str(pulse)
+		time.sleep(4)"""
+			
+
 	#check = newBreath - oldBreath
 	#print 'check= '+ str(check)
 	#if check != 0:
         #oldBreath = newBreath
         #print 'oldBreath= ' + str(oldBreath)
-        print 'newHeart= ' + str(heart)
+        
+	
+	
+	"""print 'newHeart= ' + str(heart)"""
         s.sendto(name,server)
         s.sendto(temp,server)
-        s.sendto(str(heart),server)
-        s.sendto(str(breath),server)
+        s.sendto(pulse,server)
+        s.sendto(bpd,server)
+	s.sendto(bps,server)
 
 	"""s.sendto('10',server)
 	s.sendto('20',server)
